@@ -1,7 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import AppRouter from "./routers";
+import { Provider } from 'react-redux';
+import { store } from "./store/ConfigureStore";
 
 ReactDOM.render(
-<AppRouter />
-, document.getElementById('root'));
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>,
+  document.getElementById("root")
+);
