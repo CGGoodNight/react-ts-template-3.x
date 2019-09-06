@@ -1,5 +1,5 @@
 import { ClientVersionForm } from '../models/Bo/HomeBo';
-
+import axios from "axios";
 /**
  * 获取客户端版本
  *
@@ -9,8 +9,10 @@ import { ClientVersionForm } from '../models/Bo/HomeBo';
  */
 export function fetchClientVersion(): Promise<ClientVersionForm> {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({name: "create-reac-app-internet", version: 3.1})
-    }, 500)
+    axios.get("/fetchClientVersion").then((res) => {
+      resolve(res.data.data);
+    }).catch((error) => {
+      console.log(error);
+    })
   })
 }
