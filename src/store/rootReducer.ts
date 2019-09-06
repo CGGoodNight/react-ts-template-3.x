@@ -1,12 +1,11 @@
 import { combineReducers } from 'redux';
 import homeReducer from '../features/Home/reducer';
+import languageReducer from "../features/Language/reducer";
 
 const appReducer = combineReducers({
   homeReducer,
+  languageReducer
 });
 
-const rootReducer = (state: any, action: any) => {
-  return appReducer(state, action);
-};
 
-export default rootReducer;
+export default appReducer;
