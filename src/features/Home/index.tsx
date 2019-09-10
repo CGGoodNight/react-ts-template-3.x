@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import { connect } from "react-redux";
 import { ClientVersionForm } from "../../models/Bo/HomeBo";
+import Icon from '../../components/Icon';
 import * as Action from "./action";
 import { Button } from "antd";
 import "./index.scss";
@@ -29,6 +30,7 @@ class Home extends PureComponent<Props, {}> {
         <br/>
         <Button onClick={this.props.fetchClientVersion.bind(this, { name: "create-react-app", version: 3.1 })} type="primary">获取默认版本信息</Button>
         <Button onClick={this.props.fetchClientVersionInternet} type="primary">获取网上版本信息</Button>
+        <Icon className="icon" value="qt-icon-star" />
       </div>
     );
   }

@@ -1,0 +1,19 @@
+@import '../../styles/iconfont.scss';
+
+@font-face {
+  font-family: 'QT-iconfont';
+  src: url('../../static/fonts/iconfont.eot'); /* IE9 */
+  /* stylelint-disable declaration-colon-newline-after */
+  src: url('../../static/fonts/iconfont.eot') format('embedded-opentype'),
+    url('../../static/fonts/iconfont.woff') format('woff'),
+    url('../../static/fonts/iconfont.ttf') format('truetype'),
+    url('../../static/fonts/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.qt-icon {
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+  font-family: 'QT-iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
